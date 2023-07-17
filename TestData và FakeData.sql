@@ -1,0 +1,34 @@
+use migishop;
+
+SELECT * FROM migishop.khachhang;
+INSERT INTO `migishop`.`khachhang` (`makhachhang`, `tencongty`, `tengiaodich`, `diachi`, `email`, `dienthoai`, `fax`) VALUES ('KH001', 'TNHH HÀ NỘI', 'SHIPSHIRT	', 'HÀ NỘI CTITY', 'HN@GMAIL.COM	', '0978651234', '0987654321	');
+INSERT INTO `migishop`.`khachhang` (`makhachhang`, `tencongty`, `tengiaodich`, `diachi`, `email`, `dienthoai`, `fax`) VALUES ('KH002', 'TNHH BẢO AN', 'JOCK	', 'NGHỆ AN', 'AB@GMAIL.COM', '0912345678	', '0879654312');
+INSERT INTO `migishop`.`khachhang` (`makhachhang`, `tencongty`, `tengiaodich`, `diachi`, `email`, `dienthoai`, `fax`) VALUES ('KH003', 'CỔ PHẦN VIỆT ĐÔNG', 'MUADO	', 'HÀ TĨNH', 'HT@GMAIL.COM	', '092135876	', '012345678');
+SELECT * FROM migishop.loaihang;
+INSERT INTO `migishop`.`loaihang` (`maloaihang`, `tenloaihang`) VALUES ('1', 'THỰC PHẦM');
+INSERT INTO `migishop`.`loaihang` (`maloaihang`, `tenloaihang`) VALUES ('2', 'VĂN PHÒNG');
+INSERT INTO `migishop`.`loaihang` (`maloaihang`, `tenloaihang`) VALUES ('3', 'ĐỒ DÙNG');
+SELECT * FROM migishop.nhanvien;
+INSERT INTO `migishop`.`nhanvien` (`manhanvien`, `ho`, `ten`, `ngaysinh`, `ngaylamviec`, `diachi`, `dienthoai`, `luongcoban`, `phucap`) VALUES ('NV001', 'LÊ', 'A', '1992-12-1', '2023-12-15', 'HÀ NỘI', '0987654312', '4000000', '2000000');
+INSERT INTO `migishop`.`nhanvien` (`manhanvien`, `ho`, `ten`, `ngaysinh`, `ngaylamviec`, `diachi`, `dienthoai`, `luongcoban`, `phucap`) VALUES ('NV002', 'NGUYỄN', 'B', '1991-11-1', '2023-5-19', 'HỒ CHÍ MINH', '0587654312', '5000000', '2500000');
+INSERT INTO `migishop`.`nhanvien` (`manhanvien`, `ho`, `ten`, `ngaysinh`, `ngaylamviec`, `diachi`, `dienthoai`, `luongcoban`, `phucap`) VALUES ('NV003', 'ĐOÀN', 'C', '1990-12-25', '2021-6-30', 'HẢI PHÒNG', '0887654312', '7000000', '3000000');
+SELECT * FROM migishop.nhacungcap;
+INSERT INTO `migishop`.`nhacungcap` (`macongty`, `tencongty`, `tengiaodich`, `diachi`, `dienthoai`, `fax`, `email`) VALUES ('CT001', 'TNHH ĐÔNG ÂU', 'JOCK', 'HÀ TÂY', '0988821231', '098123123', 'DT@GMAI.COM');
+INSERT INTO `migishop`.`nhacungcap` (`macongty`, `tencongty`, `tengiaodich`, `diachi`, `dienthoai`, `fax`, `email`) VALUES ('CT002', 'CỔ PHẦN VIỆT ÚC', 'RAU SẠCH NGON', 'VIỆT TRÌ', '09812321', '09213213', 'DA@GMAI.COM');
+INSERT INTO `migishop`.`nhacungcap` (`macongty`, `tencongty`, `tengiaodich`, `diachi`, `dienthoai`, `fax`, `email`) VALUES ('CT003', 'TNHH ĐÔNG TÂY', 'SÁCH VỞ ĐẸP CHỮ VIẾT', 'MỸ ĐÌNH', '09821321', '09213213', 'TO@GMAIL.COM');
+SELECT * FROM migishop.mathang;
+INSERT INTO `migishop`.`mathang` (`mahang`, `tenhang`, `macongty`, `maloaihang`, `soluong`, `donvitinh`, `giahang`) VALUES ('MH001', 'ÁO SƠ MI', 'CT003', '3', '3', 'vnd', '600000');
+INSERT INTO `migishop`.`mathang` (`mahang`, `tenhang`, `macongty`, `maloaihang`, `soluong`, `donvitinh`, `giahang`) VALUES ('MH002', 'RAU MÙI', 'CT002', '1', '1000', 'vnd', '2000000');
+INSERT INTO `migishop`.`mathang` (`mahang`, `tenhang`, `macongty`, `maloaihang`, `soluong`, `donvitinh`, `giahang`) VALUES ('MH003', 'SÁCH VỞ', 'CT003', '3', '21', 'vnd', '420000');
+INSERT INTO `migishop`.`mathang` (`mahang`, `tenhang`, `macongty`, `maloaihang`, `soluong`, `donvitinh`, `giahang`) VALUES ('MH004', 'GHẾ TỰA', 'CT001', '2', '5', 'vnd', '20000000');
+SELECT * FROM migishop.dondathang;
+INSERT INTO `migishop`.`dondathang` (`sohoadon`, `makhachhang`, `manhanvien`, `ngaydathang`, `ngaygiaohang`, `ngaychuyenhang`, `noigiaohang`) VALUES ('1', 'KH003', 'NV002', '2023-1-13', '2023-1-16', '2023-1-16', 'HÀ TĨNH');
+INSERT INTO `migishop`.`dondathang` (`sohoadon`, `makhachhang`, `manhanvien`, `ngaydathang`, `ngaygiaohang`, `ngaychuyenhang`, `noigiaohang`) VALUES ('2', 'KH001', 'NV002', '2023-1-15', '2023-1-19', '2023-1-18', 'HÀ NỘI');
+INSERT INTO `migishop`.`dondathang` (`sohoadon`, `makhachhang`, `manhanvien`, `ngaydathang`, `ngaygiaohang`, `ngaychuyenhang`, `noigiaohang`) VALUES ('3', 'KH002', 'NV001', '2023-1-15', '2023-1-19', '2023-1-18', 'NGHỆ AN');
+INSERT INTO `migishop`.`dondathang` (`sohoadon`, `makhachhang`, `manhanvien`, `ngaydathang`, `ngaygiaohang`, `ngaychuyenhang`, `noigiaohang`) VALUES ('4', 'KH002', 'NV003', '2023-1-25', '2023-1-29', '2023-1-25', 'NGHỆ AN');
+SELECT * FROM migishop.chitietdathang;
+INSERT INTO `migishop`.`chitietdathang` (`sohoadon`, `mahang`, `giaban`, `soluong`, `mucgiamgia`) VALUES ('1', 'MH001', '600000', '3', '0.5');
+INSERT INTO `migishop`.`chitietdathang` (`sohoadon`, `mahang`, `giaban`, `soluong`, `mucgiamgia`) VALUES ('2', 'MH003', '420000', '1000', '1');
+INSERT INTO `migishop`.`chitietdathang` (`sohoadon`, `mahang`, `giaban`, `soluong`, `mucgiamgia`) VALUES ('3', 'MH004', '20000000', '5', '2');
+INSERT INTO `migishop`.`chitietdathang` (`sohoadon`, `mahang`, `giaban`, `soluong`, `mucgiamgia`) VALUES ('4', 'MH002', '2000000', '1000', '0');
+
